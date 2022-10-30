@@ -7,11 +7,18 @@
     height: 3rem;
     background-color: #0f793f;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 .navbar-link {
     padding: 1rem;
     color: white;
+    height: 60%;
+    display: flex;
+    align-items: center;
+}
+.active {
+    color: #0f793f;
+    background-color: #ececec;
 }
 .properties {
     height: 2.5rem;
@@ -35,6 +42,17 @@
 }
 .font-size-prop {
     padding: 0.2rem;
+}
+.color {
+    position: relative;
+}
+.input-color {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%; 
+    opacity: 0;   
 }
 .formula-bar {
     height: 2.5rem;
@@ -94,6 +112,7 @@
     position: absolute;
     left: 1.5rem;
     top: 0;
+    font-family: monospace;
 }
 .column-header {
     display: flex;
@@ -118,15 +137,23 @@
     height: 1.5rem;
     background: pink;
     border: 1px solid;
+    outline: none;
 }
 .sheet-cont {
     height: 3rem;
     background: #ececec;
     display: flex;
     align-items: center;
+    overflow: auto;
 }
 .sheets-cont {
     margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sheet-content {
+    width: 5rem;
 }
 .sheet {
     text-decoration: underline;

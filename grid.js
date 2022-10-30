@@ -5,6 +5,7 @@ let rowheader = document.querySelector(".row-header");
 let colHeader = document.querySelector(".column-header");
 let cellCont = document.querySelector(".cell-cont");
 let addressBar = document.querySelector(".address-bar");
+addressBar.value = `A1`
 
 for(let i = 0; i < row; i++) {
     let rowHeadElem = document.createElement("div");
@@ -26,6 +27,10 @@ for(let i = 0; i < row; i++) {
     for(let j = 0; j < col; j++) {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
+        cell.setAttribute("contentEditable", true);
+        cell.setAttribute("row-id", i+1);
+        cell.setAttribute("col-id", j+1);
+        cell.setAttribute("spellCheck", "false");
         addClickEventListener(cell, i, j);
         rowCellCont.appendChild(cell);
     }
